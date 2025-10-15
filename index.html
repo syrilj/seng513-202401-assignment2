@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="quiz-container">
+            <h1>Trivia Quiz</h1>
+            <div id="loading">loading...</div>
+            <div id="quiz-content" style="display: none;">
+                <div id="question-info">
+                    <span id="question-number"></span>
+                    <span id="score">Current Score: 0</span>
+                </div>
+                <div id="question-text"></div>
+                <div id="answers"></div>
+                <div id="feedback" style="display: none;"></div>
+                <button id="next-btn" style="display: none;">Next Question</button>
+            </div>
+            <div id="final-score" style="display: none;">
+                <h2>All Done!</h2>
+                <p id="final-result"></p>
+                <div id="score-history"></div>
+                <button id="restart-btn">Try Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
