@@ -20,7 +20,7 @@ class QuizApp {
      */
     setupListeners() {
         // Using bind() to keep context
-        document.getElementById('nextbtn').addEventListener('click', 
+        document.getElementById('next-btn').addEventListener('click', 
             this.quizModule.moveToNextQ.bind(this.quizModule));
         
         // Using call() to explicitly set 'this'
