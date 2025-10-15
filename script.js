@@ -1,5 +1,5 @@
 /**
- * Main app class - coordinates all the quiz stuff
+ * Main app class coordinates all the quiz stuff
  * Uses OOP and demonstrates bind/call/apply with 'this' context
  */
 class QuizApp {
@@ -20,7 +20,7 @@ class QuizApp {
      */
     setupListeners() {
         // Using bind() to keep context
-        document.getElementById('next-btn').addEventListener('click', 
+        document.getElementById('nextbtn').addEventListener('click', 
             this.quizModule.moveToNextQ.bind(this.quizModule));
         
         // Using call() to explicitly set 'this'
@@ -40,7 +40,7 @@ class QuizApp {
             document.getElementById('loading').style.display = 'none';
             document.getElementById('quiz-content').style.display = 'block';
             
-            // setup the generator - it will control the quiz progression
+            // setup the generator  it will control the quiz progression
             this.qGen = quizFlowGenerator(this.quizModule);
             this.quizModule.qGen = this.qGen;
             
@@ -88,7 +88,7 @@ class Question {
 }
 
 /**
- * Player class - tracks user info and history
+ * Player class   tracks user info and history
  * This is the User class mentioned in requirements
  */
 class Player {
@@ -119,7 +119,7 @@ class Player {
 }
 
 /**
- * Quiz - manages quiz state and operations
+ * Quiz   manages quiz state and operations
  * Uses OOP, async/await, and generator integration
  */
 class Quiz {
@@ -340,9 +340,9 @@ class Quiz {
  * Generator function controls the quiz flow
  * 
  * This is the central control mechanism that:
- * - Yields questions one at a time
- * - Receives user answers via .next(answer)
- * - Adjusts difficulty dynamically based on performance
+ * Yields questions one at a time
+ * Receives user answers via .next(answer)
+ * Adjusts difficulty dynamically based on performance
  * 
  * Demonstrates generator pattern with yield for controlling async flow
  */
@@ -389,8 +389,6 @@ function* quizFlowGenerator(quizObj) {
                 ...quizObj.allQuestions.slice(0, qIndex),
                 ...remainingQs
             ];
-            
-            console.log(`Performance: ${(currentPerf * 100).toFixed(0)}% --> Targeting ${targetDiff} next`);
         }
     }
     
